@@ -3,47 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Gallery của tôi</title>
+    <title>Tuyển Sinh 2026 - HITC</title>
     <style>
-        body { font-family: sans-serif; background: #f4f4f4; padding: 20px; text-align: center; }
-        .container { max-width: 1000px; margin: auto; }
+        :root {
+            --primary-blue: #004a99;
+            --accent-yellow: #ffcc00;
+            --dark-bg: #0a192f;
+        }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f0f2f5; color: #333; line-height: 1.6; }
+        .header { background: var(--primary-blue); color: white; padding: 20px; text-align: center; }
+        
+        .container { max-width: 1100px; margin: 20px auto; padding: 20px; }
+        
+        /* Video Section */
+        .video-box { background: var(--dark-bg); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); margin-bottom: 40px; }
+        video { width: 100%; display: block; }
+        
+        /* Gallery Section */
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .item { background: white; padding: 10px; border-radius: 8px; shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        img, video { width: 100%; border-radius: 5px; height: auto; }
-        h2 { color: #333; }
+        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: auto; display: block; }
+        .card-content { padding: 15px; }
+
+        /* CTA Section */
+        .cta { background: var(--accent-yellow); padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
+        .btn { background: var(--primary-blue); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Thư viện Media cá nhân</h1>
-        <hr>
+    <header class="header">
+        <h1>NGÀNH TRUYỀN THÔNG & MẠNG MÁY TÍNH</h1>
+        <p>Trường Cao đẳng Công thương TP.HCM (HITC)</p>
+    </header>
 
-        <h2>Hình ảnh</h2>
+    <div class="container">
+        <div class="video-box">
+            <video controls poster="Poster.jpg">
+                <source src="https://github.com/MHThanhf/Poster_2/releases/download/abc/invideo-ai-1080.Kham.pha.nganh.Truy.n.thong.va.M.ng.may.2026-01-27.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ xem video.
+            </video>
+        </div>
+
         <div class="gallery">
-            <div class="item">
-                <img src="assets/images/Poster.png" alt="Ảnh 1">
-                <p>Mô tả ảnh 1</p>
+            <div class="card">
+                <img src="Poster.png" alt="Poster Tuyển sinh 2026">
+                <div class="card-content">
+                    <h3>Tuyển sinh 2026</h3>
+                    <p>Kết nối tri thức - Vận hành tương lai.</p>
+                </div>
             </div>
-            <div class="item">
-                <img src="assets/images/Fanpage_1.jpg" alt="Ảnh 2">
-                <p>Mô tả ảnh 2</p>
+
+            <div class="card">
+                <img src="Fanpage_2.jpg" alt="Thực hành chuyên sâu">
+                <div class="card-content">
+                    <h3>Thực hành 70%</h3>
+                    <p>Vọc vạch thiết bị thật, cấu hình Server và Cloud.</p>
+                </div>
             </div>
-            <div class="item">
-                <img src="assets/images/Fanpage_2.jpg" alt="Ảnh 3">
-                <p>Mô tả ảnh 3</p>
+
+            <div class="card">
+                <img src="Fanpage_1.jpg" alt="Môi trường học tập">
+                <div class="card-content">
+                    <h3>Cơ hội việc làm</h3>
+                    <p>Network Admin, Security, Cloud Engineer...</p>
+                </div>
             </div>
         </div>
 
-        <h2>Video</h2>
-        <div class="gallery">
-            <div class="item">
-                <video controls>
-                    <source src="https://github.com/MHThanhf/Poster_2/releases/download/abc/invideo-ai-1080.Kham.pha.nganh.Truy.n.thong.va.M.ng.may.2026-01-27.mp4" type="video/mp4">
-                    Trình duyệt của bạn không hỗ trợ xem video.
-                </video>
-                <p>Video demo 1</p>
-            </div>
+        <div class="cta">
+            <h2>Sẵn sàng trở thành "Admin" hệ thống?</h2>
+            <p>Đăng ký xét tuyển ngay để nhận lộ trình thăng tiến rõ ràng.</p><br>
+            <a href="https://tuyensinh.hitc.edu.vn" class="btn">ĐĂNG KÝ NGAY</a>
         </div>
     </div>
 
